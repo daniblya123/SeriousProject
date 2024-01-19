@@ -1,0 +1,51 @@
+@font-face {
+  font-family: MainFont;
+  src: url(Fonts/Qualy-Bold.ttf);
+}
+.siteTitle {
+  font-size: 2.1rem;
+  color: #ffeaa7;
+}
+nav {
+  font-family: MainFont;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+}
+nav ul {
+  border: 1px red solid;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+}
+nav ul li {
+  margin-right: 30px;
+}
+a:not(.siteTitle) {
+  background-color: rgba(83, 85, 105, 0.3);
+  border-radius: 40px;
+  padding: 0.9rem 1.6rem 0.9rem 1.6rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  transition: all 200ms linear;
+}
+a:hover:not(.siteTitle) {
+  background-color: rgba(83, 85, 105, 0.6);
+  transition: all 200ms linear;
+}
+
+body {
+  color: #212112;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 7%;
+  background-color: #1f2029;
+  overflow-x: hidden;
+  transition: all 200ms linear;
+}
