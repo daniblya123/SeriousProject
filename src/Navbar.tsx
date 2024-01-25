@@ -1,4 +1,6 @@
 import "./Navbar.css";
+import ReactSwitch from "react-switch";
+
 function Navbar() {
   return (
     <>
