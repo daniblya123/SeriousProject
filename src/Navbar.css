@@ -5,6 +5,7 @@
 .siteTitle {
   font-size: 2.1rem;
   color: #ffeaa7;
+  text-decoration: none;
 }
 nav {
   font-family: MainFont;
@@ -13,8 +14,7 @@ nav {
   justify-content: space-between;
   width: 90%;
   margin: auto;
-  margin-top: 1rem;
-  border: 1px solid red;
+  margin-top: 2rem;
 }
 nav ul {
   display: flex;
@@ -39,11 +39,10 @@ a:hover:not(.siteTitle) {
   transition: all 200ms linear;
 }
 
-.switch {
-  display: flex;
-}
-
 nav {
   background-color: inherit; /* Use the background-color from the parent */
   color: inherit; /* Use the text color from the parent */
+}
+.active:not(.siteTitle) {
+  background-color: rgba(83, 85, 105, 0.6) !important;
 }

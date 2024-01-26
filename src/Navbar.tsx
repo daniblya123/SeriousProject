@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import ReactSwitch from "react-switch";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,18 +7,20 @@ function Navbar() {
       <nav>
         <ul>
           <li>
-            <a className="siteTitle">Bean And Brew</a>
+            <NavLink to="/home" className="siteTitle">
+              Bean And Brew
+            </NavLink>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="">Login</a>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <a href="">Contacts</a>
+            <NavLink to="/home">Contacts</NavLink>
           </li>
           <li>
-            <a href="">About</a>
+            <NavLink to="/about">About</NavLink>
           </li>
         </ul>
       </nav>
