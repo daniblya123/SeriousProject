@@ -2,8 +2,6 @@ from bcrypt import checkpw, gensalt, hashpw
 from flask import Flask, request
 from flask_cors import CORS
 import sqlite3
-
-
   
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -14,7 +12,7 @@ def login():
     con = sqlite3.connect('G:\data.db')
     cu = con.cursor()
     email = request.json["username"]
-    password = request.json["password"]
+    password = request.json["password"].encode("utf-8")
 
     emailQuery = """Select Password From UserData Where Email = ?"""
     cu.execute(emailQuery, (email,))
