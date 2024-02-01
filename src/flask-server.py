@@ -9,12 +9,12 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 @app.route("/login", methods=["POST"])
 
 def login():
-    con = sqlite3.connect('G:\data.db')
+    con = sqlite3.connect('G:\cookieshop.db')
     cu = con.cursor()
     email = request.json["username"]
     password = request.json["password"].encode("utf-8")
 
-    emailQuery = """Select Password From UserData Where Email = ?"""
+    emailQuery = """Select Password From Customer Where Email = ?"""
     cu.execute(emailQuery, (email,))
     con.commit()
     response = cu.fetchall()
