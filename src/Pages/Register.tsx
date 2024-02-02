@@ -3,7 +3,7 @@ import "./LoginLayout.css";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
-function Login() {
+function Register() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [responseText, setResponseText] = useState("");
@@ -14,7 +14,7 @@ function Login() {
     event.preventDefault();
     setResponseText("");
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("http://localhost:5000/register", {
         username: email,
         password: pass
       });
@@ -32,8 +32,7 @@ function Login() {
   return (
     <div className="container">
       <div className="inner-container">
-        <p>Login </p>
-
+        <p>Register </p>
         <>
           <div className="Login">
             <div className="LoginForm">
@@ -47,7 +46,6 @@ function Login() {
                   id="email"
                   name="email"
                 />
-
                 <label htmlFor="password">Password</label>
                 <input
                   value={pass}
@@ -57,7 +55,7 @@ function Login() {
                   id="password"
                   name="password"
                 />
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
               </form>
             </div>
 
@@ -69,4 +67,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
