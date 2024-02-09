@@ -1,21 +1,23 @@
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useCollapse } from 'react-collapsed';
 
 function Navbar() {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   return (
     <>
       <nav>
         <ul>
           <li>
-            <NavLink to="/home" className="siteTitle">
-              Bean And Brew
+            <NavLink to="/home" className="siteTitle" >
+            Bean & Brews
             </NavLink>
           </li>
         </ul>
         <ul>
           <li>
-            <NavLink to="/login">Login</NavLink>
-            <div className="loginContainer">
+            <NavLink to="/login" {...getToggleProps()}>{isExpanded ? 'Login' : 'Login'}</NavLink>
+            <div className="loginContainer" {...getCollapseProps()}>
               <form>
                 <p className="formTitle">Login</p>
                 <input type="text" placeholder="Username"/>

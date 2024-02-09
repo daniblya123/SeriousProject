@@ -50,13 +50,15 @@ nav {
   width: 20%;
   display: flex;
   background-color: #ddd;
-    position: absolute;
+  position: absolute;
   border-radius: 20px;
+  margin-top: 20px;
 
 }
 .formTitle{
   margin-top: 1rem;
   font-size: 1rem;
+  text-align: center;
 }
 
 input {
@@ -71,6 +73,7 @@ input {
   font-weight: 300;
   font-style: italic;
   border-radius: 25px;
+  
   
 }
 input[type="submit"] {
