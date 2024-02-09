@@ -46,3 +46,41 @@ nav {
 .active:not(.siteTitle) {
   background-color: rgba(83, 85, 105, 0.6) !important;
 }
+.loginContainer{
+  width: 20%;
+  display: flex;
+  background-color: #ddd;
+    position: absolute;
+  border-radius: 20px;
+
+}
+.formTitle{
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+input {
+  
+  width: 100%;
+  margin-top: 1rem;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 0;
+  outline: 0;
+  background: #f1f1f1;
+  font-weight: 300;
+  font-style: italic;
+  border-radius: 25px;
+  
+}
+input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  width:50%;
+  text-align: center;
+  color: #ffF;
+  background: #1BBC9B;
+  font-style: normal;
+  font-family: MainFont;
+  box-shadow: 0 4px 0 darken(#1BBC9B, 5%);
+}

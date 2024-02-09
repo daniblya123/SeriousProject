@@ -15,6 +15,14 @@ function Navbar() {
         <ul>
           <li>
             <NavLink to="/login">Login</NavLink>
+            <div className="loginContainer">
+              <form>
+                <p className="formTitle">Login</p>
+                <input type="text" placeholder="Username"/>
+                <input type="password" placeholder="Password"/>
+                <input type="submit" placeholder="SUBMIT"/>
+              </form>
+            </div>
           </li>
           <li>
             <NavLink to="/home">Contacts</NavLink>
