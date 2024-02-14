@@ -2,6 +2,10 @@
   font-family: MainFont;
   src: url(Fonts/Qualy-Bold.ttf);
 }
+@font-face {
+  font-family: LoginFont;
+  src: url(Fonts/Garet-Book.ttf);
+}
 .siteTitle {
   font-size: 2.1rem;
   color: #ffeaa7;
@@ -46,36 +50,36 @@ nav {
 .active:not(.siteTitle) {
   background-color: rgba(83, 85, 105, 0.6) !important;
 }
+
 .loginContainer{
   width: 20%;
-  display: flex;
+  font-family: LoginFont;   
   background-color: #ddd;
   position: absolute;
   border-radius: 20px;
   margin-top: 20px;
-
+  
+  
 }
 .formTitle{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 1rem;
-  
+  font-size: 1.32rem;
   text-align: center;
 }
 .loginForm{
   padding-left: 50px;
+  
 }
 .loginButton{
-margin-left: 32.5%;
+  margin-left: 32.5%;
 }
 input {
-  
-  margin-left: auto;
-  margin-right:auto;
+  border: none;
+ 
+  margin: 3rem auto 0.5rem auto;
   width: 80%;
-  margin-top: 1rem;
   padding: 8px;
-  margin-bottom: 10px;
-  outline: 0;
   background: #f1f1f1;
   font-weight: 300;
   font-style: italic;
@@ -83,11 +87,38 @@ input {
 }
 
 input[type="submit"] {
+  margin-bottom: 2rem;
   width:35%;
   text-align: center;
   color: #ffF;
-  background: #1BBC9B;
+  background-color: rgba(83, 77, 88, 0.8);
   font-style: normal;
-  font-family: MainFont;
-  box-shadow: 0 4px 0 darken(#1BBC9B, 5%);
+  font-family: LoginFont;
+  font-weight: bolder;
+  font-size: 1rem;
+  cursor:pointer;
+  margin-top: 20px !important;
+}
+input[type="submit"]:hover{
+  background-color: rgba(83, 77, 88, 0.7);
+}
+.loginText{
+  padding-top: 20px;
+  padding-left: 5px;
+  position: absolute;
+}
+.registerButton{
+  font-family: LoginFont;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-left: 217px;
+  color: blue;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+}
+img{
+  width: 10% !important;
+  
 }
