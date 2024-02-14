@@ -15,14 +15,16 @@ function Navbar() {
           </li>
         </ul>
         <ul>
-          <li>
-            <NavLink to="/login" {...getToggleProps()}>{isExpanded ? 'Login' : 'Login'}</NavLink>
+          <li >
+            <NavLink to="#" {...getToggleProps()}>{isExpanded ? 'Login ▽' : 'Login △'}</NavLink>
             <div className="loginContainer" {...getCollapseProps()}>
               <form>
                 <p className="formTitle">Login</p>
+                <div className="loginForm">
                 <input type="text" placeholder="Username"/>
                 <input type="password" placeholder="Password"/>
-                <input type="submit" placeholder="SUBMIT"/>
+                </div>
+                <input  className="loginButton" type="submit" placeholder="SUBMIT"/>
               </form>
             </div>
           </li>
