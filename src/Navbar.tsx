@@ -8,54 +8,7 @@ import Login from "./Pages/Login";
 
 function Navbar() {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
-  const handleLoginClick = () => {
-    <form className="form" id="login">
-      <input
-        type="text"
-        className="inputField"
-        placeholder="User ID"
-        required
-      ></input>
-      <input
-        type="text"
-        className="inputField"
-        placeholder="Password"
-        required
-      ></input>
-      <input type="checkbox" className="checkBox"></input>
-      <span>Remember Password</span>
-      <button type="button" className="submitButton">
-        Login
-      </button>
-    </form>;
-  };
-  const handleRegisterClick = () => {
-    <form className="form" id="register">
-      <input
-        type="text"
-        className="inputField"
-        placeholder="User ID"
-        required
-      ></input>
-      <input
-        type="email"
-        className="inputField"
-        placeholder="Email"
-        required
-      ></input>
-      <input
-        type="text"
-        className="inputField"
-        placeholder="Password"
-        required
-      ></input>
-      <input type="checkbox" className="checkBox"></input>
-      <span>I agree to the terms & conditions</span>
-      <button type="button" className="submitButton">
-        Login
-      </button>
-    </form>;
-  };
+  const handleRegisterClick = () => {};
   return (
     <>
       <nav>
@@ -100,6 +53,52 @@ function Navbar() {
           <img src={X}></img>
           <img src={Facebook}></img>
         </div>
+
+        <form className="form" id="login">
+          <input
+            type="text"
+            className="inputField"
+            placeholder="User ID"
+            required
+          ></input>
+          <input
+            type="text"
+            className="inputField"
+            placeholder="Password"
+            required
+          ></input>
+          <input type="checkbox" className="checkBox"></input>
+          <span>Remember Password</span>
+          <button type="button" className="submitButton">
+            Login
+          </button>
+        </form>
+
+        <form className="form" id="register">
+          <input
+            type="text"
+            className="inputField"
+            placeholder="User ID"
+            required
+          ></input>
+          <input
+            type="email"
+            className="inputField"
+            placeholder="Email"
+            required
+          ></input>
+          <input
+            type="text"
+            className="inputField"
+            placeholder="Password"
+            required
+          ></input>
+          <input type="checkbox" className="checkBox"></input>
+          <span>I agree to the terms & conditions</span>
+          <button type="button" className="submitButton">
+            Login
+          </button>
+        </form>
       </div>
       <script></script>
     </>
