@@ -67,6 +67,9 @@ nav {
   background-color: #fff;
   padding: 5px;
   overflow: hidden;
+  font-family: LoginFont;
+  border-radius: 30px;
+  border: 1px solid green;
 }
 .buttonBox {
   width: 220px;
@@ -84,15 +87,19 @@ nav {
   position: relative;
   outline: none;
 }
-#btn {
+.toggleBtn.on,
+.toggleBtn.off {
   top: 0;
   left: 0;
-  position: absolute;
   width: 110px;
   height: 100%;
   transform: 0.5s;
   border-radius: 30px;
   background: linear-gradient(to right, #ff105f, #ffad06);
+  transition: 3000ms;
+}
+
+#btn {
 }
 
 .socialIcons {
@@ -105,15 +112,11 @@ nav {
   margin: 0 12px;
 }
 
-.formBox {
-  font-family: LoginFont;
-  border-radius: 30px;
-}
-
 .form {
-  top: 180px;
+  top: 120px;
   position: absolute;
   width: 280px;
+  margin: 50px;
 }
 
 .inputField {
