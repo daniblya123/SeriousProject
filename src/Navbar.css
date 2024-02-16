@@ -77,6 +77,7 @@ nav {
   position: relative;
   box-shadow: 0px 0px 20px 9px #ff61241f;
   border-radius: 30px;
+  
 }
 
 .toggleBtn {
@@ -96,7 +97,7 @@ nav {
   transform: 0.5s;
   border-radius: 30px;
   background: linear-gradient(to right, #ff105f, #ffad06);
-  transition: 3000ms;
+  
 }
 
 #btn {
@@ -148,9 +149,10 @@ nav {
   margin: 30px 10px 30px 0;
 }
 
-span {
+.checkboxStyle {
   color: #777;
   font-size: 12px;
   bottom: 67px;
   position: absolute;
 }
+

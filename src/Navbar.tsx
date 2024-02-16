@@ -9,6 +9,10 @@ import TempSignup from "./TempSignup";
 import TempLogin from "./TempLogin";
 
 function Navbar() {
+  const customColor = '#1e9bff';
+  const customStyle = {
+    '--clr': customColor
+  };
   const [displayRegister, setDisplayRegister] = useState(true);
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   const handleAuthClick = () => {
@@ -83,7 +87,7 @@ function Navbar() {
               required
             ></input>
             <input type="checkbox" className="checkBox"></input>
-            <span>I agree to the terms & conditions</span>
+            <span className="checkboxStyle">I agree to the terms & conditions</span>
             <button type="button" className="submitButton">
               Register
             </button>
@@ -127,13 +131,16 @@ function Navbar() {
               required
             ></input>
             <input type="checkbox" className="checkBox"></input>
-            <span>Remember Password</span>
+            <span className="checkboxStyle">Remember Password</span>
             <button type="button" className="submitButton">
               Login
             </button>
           </form>
+          
         </div>
       )}
+      
+     
     </>
   );
 }
