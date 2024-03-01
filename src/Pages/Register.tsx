@@ -16,7 +16,7 @@ function Register() {
     try {
       const response = await axios.post("http://localhost:5000/register", {
         username: email,
-        password: pass
+        password: pass,
       });
       setResponseText(response.data);
       console.log(response.data);
@@ -40,7 +40,7 @@ function Register() {
                 <label htmlFor="email">Email</label>
                 <input
                   value={email}
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="youremail@gmail.com"
                   id="email"
@@ -49,7 +49,7 @@ function Register() {
                 <label htmlFor="password">Password</label>
                 <input
                   value={pass}
-                  onChange={e => setPass(e.target.value)}
+                  onChange={(e) => setPass(e.target.value)}
                   type="password"
                   placeholder="*********"
                   id="password"

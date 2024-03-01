@@ -77,7 +77,6 @@ nav {
   position: relative;
   box-shadow: 0px 0px 20px 9px #ff61241f;
   border-radius: 30px;
-  
 }
 
 .toggleBtn {
@@ -97,7 +96,6 @@ nav {
   transform: 0.5s;
   border-radius: 30px;
   background: linear-gradient(to right, #ff105f, #ffad06);
-  
 }
 
 #btn {
@@ -155,4 +153,3 @@ nav {
   bottom: 67px;
   position: absolute;
 }
-

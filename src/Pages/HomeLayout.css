@@ -1,0 +1,19 @@
+@font-face {
+  font-family: MainFont;
+  src: url(Fonts/Qualy-Bold.ttf);
+}
+
+.MenuText {
+  margin-top: 4rem;
+  font-size: 1.7rem;
+  color: white;
+  font-family: MainFont;
+  text-align: center;
+}
+.imageRowContainer {
+  display: flex;
+  border: 1px red solid;
+}
+.imageRow {
+  display: flex;
+}

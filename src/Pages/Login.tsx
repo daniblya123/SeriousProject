@@ -1,72 +1,102 @@
-import { FormEvent, useState } from "react";
-import "./LoginLayout.css";
-import axios from "axios";
-import { NavLink } from "react-router-dom";
-
+import { useState } from "react";
+import Socials from "../Socials";
 function Login() {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [responseText, setResponseText] = useState("");
-
-  const handleButtonClick = () => {};
-
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    setResponseText("");
-    try {
-      const response = await axios.post("http://localhost:5000/login", {
-        username: email,
-        password: pass
-      });
-      setResponseText(response.data);
-      console.log(response.data);
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        setResponseText(error.message);
-      } else {
-        setResponseText(String(error));
-      }
-    }
+  const [displayRegister, setDisplayRegister] = useState(true);
+  const handleAuthClick = () => {
+    setDisplayRegister(!displayRegister);
   };
-
   return (
-    <div className="container">
-      <div className="inner-container">
-        <p>Login </p>
-
-        <>
-          <div className="Login">
-            <div className="LoginForm">
-              <form onSubmit={handleSubmit}>
-                <label htmlFor="email">Email</label>
-                <input
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  type="email"
-                  placeholder="youremail@gmail.com"
-                  id="email"
-                  name="email"
-                />
-
-                <label htmlFor="password">Password</label>
-                <input
-                  value={pass}
-                  onChange={e => setPass(e.target.value)}
-                  type="password"
-                  placeholder="*********"
-                  id="password"
-                  name="password"
-                />
-                <button type="submit">Login</button>
-              </form>
-            </div>
-
-            <NavLink to="/Register">Register</NavLink>
+    <>
+      {displayRegister ? (
+        <div className="formBox">
+          <div className="buttonBox">
+            <div id="btn"></div>
+            <button
+              type="button"
+              className={`toggleBtn ${displayRegister ? "on" : "off"}`}
+              onClick={handleAuthClick}
+            >
+              Register
+            </button>
+            <button
+              type="button"
+              className="toggleBtn"
+              onClick={handleAuthClick}
+            >
+              Login
+            </button>
           </div>
-        </>
-      </div>
-    </div>
+          <Socials />
+          <form className="form" id="register">
+            <input
+              type="text"
+              className="inputField"
+              placeholder="User ID"
+              required
+            ></input>
+            <input
+              type="email"
+              className="inputField"
+              placeholder="Email"
+              required
+            ></input>
+            <input
+              type="text"
+              className="inputField"
+              placeholder="Password"
+              required
+            ></input>
+            <input type="checkbox" className="checkBox"></input>
+            <span className="checkboxStyle">
+              I agree to the terms & conditions
+            </span>
+            <button type="button" className="submitButton">
+              Register
+            </button>
+          </form>
+        </div>
+      ) : (
+        <div className="formBox">
+          <div className="buttonBox">
+            <div id="btn"></div>
+            <button
+              type="button"
+              className="toggleBtn"
+              onClick={handleAuthClick}
+            >
+              Register
+            </button>
+            <button
+              type="button"
+              className={`toggleBtn ${displayRegister ? "on" : "off"}`}
+              onClick={handleAuthClick}
+            >
+              Login
+            </button>
+          </div>
+          <Socials />
+          <form className="form" id="register">
+            <input
+              type="text"
+              className="inputField"
+              placeholder="User ID"
+              required
+            ></input>
+            <input
+              type="text"
+              className="inputField"
+              placeholder="Password"
+              required
+            ></input>
+            <input type="checkbox" className="checkBox"></input>
+            <span className="checkboxStyle">Remember Password</span>
+            <button type="button" className="submitButton">
+              Login
+            </button>
+          </form>
+        </div>
+      )}
+    </>
   );
 }
-
 export default Login;
