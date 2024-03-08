@@ -10,10 +10,25 @@
   font-family: MainFont;
   text-align: center;
 }
+
 .imageRowContainer {
   display: flex;
-  border: 1px red solid;
+  text-align: center;
+  margin-top: 50px;
 }
 .imageRow {
+  width: 100%;
+
   display: flex;
+  justify-content: space-evenly;
+}
+.box {
+  background-color: rgba(111, 104, 118, 0.3);
+  padding: 2rem 3rem 5rem 3rem;
+  border-radius: 40px;
+}
+h3 {
+  color: white;
+  font-family: MainFont;
+  font-size: 19px;
 }
